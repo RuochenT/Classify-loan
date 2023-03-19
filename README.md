@@ -32,8 +32,7 @@ Box plots: Continuous VS Categorical (Loan_Status).
 2.) Statistical Feature Selection
 
 However, to give more precise correlation, statistical tests are used to confirm the visualization.
-
-**Chi-Square test**: check the correlation between two categorical varaibles.
+**Chi-Square test** is used to check the correlation between two categorical varaibles. However, **ANOVA test** is used to check the correlation between continuous variable and categorical variable. The assumption for both test is based on the following
 
 H0: the two variables are not correlated 
 
@@ -41,14 +40,9 @@ H1: the two varaibles are correlated
 
 If p-value is <0.05, the H0 is rejected and two variables are correlated. 
 
-The test from Chi-square shows that 'Married', 'Education', 'Credit_History', and 'Property_Area' are correlated to Loan_Status.
-
-**ANOVA test**: check the correlation between continuous variable and categorical variable. 
-
-The result from ANOVA test shows that 'ApplicantIncome', 'CoapplicantIncome', and 'LoanAmount' are not correlated to Loan_Status.
+The result from Chi-square test shows that 'Married', 'Education', 'Credit_History', and 'Property_Area' are correlated to Loan_Status. On the other hand, the result from ANOVA test shows that 'ApplicantIncome', 'CoapplicantIncome', and 'LoanAmount' are not correlated to Loan_Status.
 
 In conclusion, only 'Married', 'Education', 'Credit_History', and 'Property_Area' variables are correlated to Loan_Status.
-
 
 ## Method and process 
 
@@ -57,3 +51,5 @@ In conclusion, only 'Married', 'Education', 'Credit_History', and 'Property_Area
 The accuracy from four models are 0.74
 
 ## Conclusion
+
+Although all four models give high accuracy, a larger data set is needed to train the model in order to improve accuracy. 
