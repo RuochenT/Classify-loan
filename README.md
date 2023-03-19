@@ -6,13 +6,15 @@ in saving the time and the cost for reviewing large amount of applications.
 ## Data
 
 ### EDA
-
+![loan_status](https://user-images.githubusercontent.com/119982930/226212934-e552e75f-20e1-4208-88e0-9c5a37501ec4.png)
+![cat_var](https://user-images.githubusercontent.com/119982930/226212928-0ed7d1f7-0ad4-4041-abb9-3d52f6a275e7.png)
+![con_var](https://user-images.githubusercontent.com/119982930/226212932-42cfa172-0fc8-4319-932c-d0694c8eb73a.png)
 
 
 ### Data preprocessing
-1.) drop unnecessary column (Loan_status).
+1.) drop unnecessary column.
 
-2.) missing values treatment by replacing with mode of the column.
+2.) missing values from both continuous and categorical variables are replaced by mode since it is an appropraite treatment for categorical variable or when the variable is skewed. 
 
 ### feature selection
 This step is included to choose the best features which are correlated to Loan_status. 
@@ -26,7 +28,12 @@ There are two methods that have been done in the script.
 
 Bar plots: Categorical Vs Categorical(Loan_Status).
 
+![cat_loan](https://user-images.githubusercontent.com/119982930/226212926-54ef88b2-4a79-4c74-8d29-f7bc8c9e4117.png)
+
+
 Box plots: Continuous VS Categorical (Loan_Status).
+
+![con_loan](https://user-images.githubusercontent.com/119982930/226212931-cffe5293-cfb5-41aa-9adc-768de4ba94e6.png)
 
 
 2.) Statistical Feature Selection
@@ -45,6 +52,10 @@ The result from Chi-square test shows that 'Married', 'Education', 'Credit_Histo
 In conclusion, only 'Married', 'Education', 'Credit_History', and 'Property_Area' variables are correlated to Loan_Status.
 
 ## Method and process 
+![featureimpr_rf](https://user-images.githubusercontent.com/119982930/226212942-6361f9c1-35f3-49fa-b101-f4de37e4a763.png)
+
+![shap_xgb](https://user-images.githubusercontent.com/119982930/226212935-ef8e277e-278a-49fa-b890-f53475b0661d.png)
+
 
 ## Result
 
