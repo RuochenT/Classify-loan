@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # load data set
-df = pd.read_csv("/Users/ruochentan1/Desktop/loan.csv")
+df = pd.read_csv("/Users/ruochentan1/PycharmProjects/loan/loan.csv")
 pd.set_option('display.expand_frame_repr', False) # expand all output
 df.info() # check variable type and missing values( gender, married, dependents, self-employted.LoanAmount, Loan_Amount_Term)
 df.head()
@@ -182,11 +182,6 @@ F1_Score= metrics.f1_score(y_test, prediction, average='weighted')
 print("Overall accuracy on Testing Sample Data:", round(F1_Score,2))
 print("Confusion Matrix on Test data")
 pd.crosstab(y_test, prediction, rownames=['True'], colnames=['Predicted'], margins=True)
-
-# 10-Fold Cross validation
-from sklearn.model_selection import cross_val_score
-Accuracy_Values=cross_val_score(log, X , np.ravel(y), cv=10, scoring='f1_weighted')
-print("Average Accuracy of the model:", round(Accuracy_Values.mean(),3)) # average 0.784
 
 
 # ---------------- (2) Random Forest (Bagging of multiple Decision Trees)
