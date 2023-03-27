@@ -51,15 +51,23 @@ The result from Chi-square test shows that 'Married', 'Education', 'Credit_Histo
 
 In conclusion, only 'Married', 'Education', 'Credit_History', and 'Property_Area' variables are correlated to Loan_Status.
 
-## Method and process 
+## Visualization
+
+### The feature importance for Top 10 most important columns from Random Forest
+
 ![featureimpr_rf](https://user-images.githubusercontent.com/119982930/226212942-6361f9c1-35f3-49fa-b101-f4de37e4a763.png)
+
+### Shap summary plot 
 
 ![shap_xgb](https://user-images.githubusercontent.com/119982930/226212935-ef8e277e-278a-49fa-b890-f53475b0661d.png)
 
+Features in the summary plot are ranked by the means of SHAP values or how much impact each feature has on heart disease on average. Each dot represents each observation in the test set, and the color of each dot shows the effect of the feature value on heart disease when the feature value is increasing and decreasing. The dots that have been piled up vertically show the density of the observations in that sub-feature. As a result, the SHAP summary plot shows not only the range and the distribution of each feature on loan status on the global scale, but also shows the relationship between the feature value on loan status.
+
+The two plots show that credit history is the most important feature to loan status. Howover, SHAP summary plot indicates that if observation is married and living in semiurban area, they will have an increase in a log odds ratio or more chance to get approved for the loan on average.
 
 ## Result
 
-The accuracy from four models are 0.74
+All algorithms have produced similar kind of average accuracy which is  0.74.
 
 ## Conclusion
 
